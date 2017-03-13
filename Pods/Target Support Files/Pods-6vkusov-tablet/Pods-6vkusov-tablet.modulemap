@@ -1,0 +1,6 @@
+framework module Pods_6vkusov_tablet {
+  umbrella header "Pods-6vkusov-tablet-umbrella.h"
+
+  export *
+  module * { export * }
+}

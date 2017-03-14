@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		6008D3DA1E63FCA300627F1B /* LicensiaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6008D3D91E63FCA300627F1B /* LicensiaViewController.swift */; };
 		6008D3DC1E63FFB000627F1B /* RemmemberPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6008D3DB1E63FFB000627F1B /* RemmemberPasswordViewController.swift */; };
+		601410A81E77DCAF001E3C6C /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601410A61E77DCAF001E3C6C /* Restaurant.swift */; };
+		601410A91E77DCAF001E3C6C /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601410A71E77DCAF001E3C6C /* Category.swift */; };
+		601410AD1E77DCC4001E3C6C /* CategoryTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601410AB1E77DCC4001E3C6C /* CategoryTVCell.swift */; };
+		601410AE1E77DCC4001E3C6C /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601410AC1E77DCC4001E3C6C /* RestaurantTableViewCell.swift */; };
+		601410B11E77DD74001E3C6C /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601410AF1E77DD74001E3C6C /* RestaurantsViewController.swift */; };
+		601410B21E77DD74001E3C6C /* RestaurantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601410B01E77DD74001E3C6C /* RestaurantsTableViewController.swift */; };
 		608CF7DC1E61969400220541 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608CF7D91E61969400220541 /* BaseViewController.swift */; };
 		608CF7DD1E61969400220541 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608CF7DA1E61969400220541 /* MainViewController.swift */; };
 		608CF7DE1E61969400220541 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608CF7DB1E61969400220541 /* RegistrationViewController.swift */; };
@@ -62,6 +68,12 @@
 		3EF868C9EF94C3602A077630 /* Pods-6vkusov-tablet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-6vkusov-tablet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-6vkusov-tablet/Pods-6vkusov-tablet.debug.xcconfig"; sourceTree = "<group>"; };
 		6008D3D91E63FCA300627F1B /* LicensiaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicensiaViewController.swift; sourceTree = "<group>"; };
 		6008D3DB1E63FFB000627F1B /* RemmemberPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemmemberPasswordViewController.swift; sourceTree = "<group>"; };
+		601410A61E77DCAF001E3C6C /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		601410A71E77DCAF001E3C6C /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		601410AB1E77DCC4001E3C6C /* CategoryTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTVCell.swift; sourceTree = "<group>"; };
+		601410AC1E77DCC4001E3C6C /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		601410AF1E77DD74001E3C6C /* RestaurantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController.swift; sourceTree = "<group>"; };
+		601410B01E77DD74001E3C6C /* RestaurantsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantsTableViewController.swift; sourceTree = "<group>"; };
 		608CF7D91E61969400220541 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		608CF7DA1E61969400220541 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		608CF7DB1E61969400220541 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -151,11 +163,31 @@
 			name = AuthControllers;
 			sourceTree = "<group>";
 		};
+		601410A51E77DCA5001E3C6C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				601410A61E77DCAF001E3C6C /* Restaurant.swift */,
+				601410A71E77DCAF001E3C6C /* Category.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		601410AA1E77DCB9001E3C6C /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				601410AB1E77DCC4001E3C6C /* CategoryTVCell.swift */,
+				601410AC1E77DCC4001E3C6C /* RestaurantTableViewCell.swift */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
 		608CF7D81E61968200220541 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				6008D3DD1E640A1F00627F1B /* AuthControllers */,
 				608CF7D91E61969400220541 /* BaseViewController.swift */,
+				601410AF1E77DD74001E3C6C /* RestaurantsViewController.swift */,
+				601410B01E77DD74001E3C6C /* RestaurantsTableViewController.swift */,
 				608CF7DA1E61969400220541 /* MainViewController.swift */,
 				609377521E6978E700317803 /* CategoriesViewController.swift */,
 				609377531E6978E700317803 /* ProfileViewController.swift */,
@@ -219,6 +251,8 @@
 		60AE6A8E1E5DBD90004A39F2 /* 6vkusov-tablet */ = {
 			isa = PBXGroup;
 			children = (
+				601410AA1E77DCB9001E3C6C /* TableViewCells */,
+				601410A51E77DCA5001E3C6C /* Models */,
 				609377471E69789400317803 /* Users */,
 				608CF7E91E6196E000220541 /* Ext.swift */,
 				608CF7DF1E6196AA00220541 /* Utilites */,
@@ -546,12 +580,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				601410A81E77DCAF001E3C6C /* Restaurant.swift in Sources */,
 				608CF7E71E6196D500220541 /* JsonHelperLoad.swift in Sources */,
 				609377461E69787B00317803 /* Singleton.swift in Sources */,
 				609377511E6978A500317803 /* STATUS.swift in Sources */,
 				608CF7E81E6196D500220541 /* LoadJson.swift in Sources */,
+				601410AE1E77DCC4001E3C6C /* RestaurantTableViewCell.swift in Sources */,
 				60AE6A901E5DBD90004A39F2 /* AppDelegate.swift in Sources */,
 				608CF7E21E6196BB00220541 /* CheckBox.swift in Sources */,
+				601410AD1E77DCC4001E3C6C /* CategoryTVCell.swift in Sources */,
 				608CF7DC1E61969400220541 /* BaseViewController.swift in Sources */,
 				608CF7E31E6196BB00220541 /* Validator.swift in Sources */,
 				6008D3DC1E63FFB000627F1B /* RemmemberPasswordViewController.swift in Sources */,
@@ -559,10 +596,13 @@
 				6093774F1E6978A500317803 /* Registred.swift in Sources */,
 				6093774D1E6978A500317803 /* Basket.swift in Sources */,
 				608CF7DE1E61969400220541 /* RegistrationViewController.swift in Sources */,
+				601410A91E77DCAF001E3C6C /* Category.swift in Sources */,
 				609377501E6978A500317803 /* General.swift in Sources */,
 				609377541E6978E700317803 /* CategoriesViewController.swift in Sources */,
 				6008D3DA1E63FCA300627F1B /* LicensiaViewController.swift in Sources */,
+				601410B21E77DD74001E3C6C /* RestaurantsTableViewController.swift in Sources */,
 				609377451E69787B00317803 /* LocalStorage.swift in Sources */,
+				601410B11E77DD74001E3C6C /* RestaurantsViewController.swift in Sources */,
 				608CF7EC1E61A9E400220541 /* LoginViewController.swift in Sources */,
 				609377551E6978E700317803 /* ProfileViewController.swift in Sources */,
 				6093774E1E6978A500317803 /* UserInterface.swift in Sources */,

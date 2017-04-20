@@ -6,6 +6,7 @@ target '6vkusov-tablet' do
   use_frameworks!
 
   pod 'SDWebImage'
+  pod 'SCLAlertView'
 
   target '6vkusov-tabletTests' do
     inherit! :search_paths

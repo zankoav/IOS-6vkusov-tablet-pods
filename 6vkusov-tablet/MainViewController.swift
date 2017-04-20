@@ -39,10 +39,19 @@ class MainViewController: BaseViewController {
             loginButton.setTitle("Войти", for: UIControlState.selected)
             loginButton.setTitle("Войти", for: UIControlState.highlighted)
         }else{
-            let email = singleton.getUser()?.getProfile()?["email"] as? String
-            loginButton.setTitle(email, for: UIControlState.normal)
-            loginButton.setTitle(email, for: UIControlState.selected)
-            loginButton.setTitle(email, for: UIControlState.highlighted)
+            let userData = singleton.getUser()?.getProfile()
+            let firstName = userData?["firstName"] as? String
+            
+            loginButton.setTitle(firstName, for: UIControlState.normal)
+            loginButton.setTitle(firstName, for: UIControlState.selected)
+            loginButton.setTitle(firstName, for: UIControlState.highlighted)
+            
+            let img_path = userData?["img_path"] as! String
+            if let avatar = userData?["avatar"] as? String {
+                let url = REST_URL.SF_DOMAIN.rawValue + img_path + "/" + avatar
+                logoMenu.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named:"checkBoxOn"))
+            }
+
         }
         
     }
@@ -54,18 +63,24 @@ class MainViewController: BaseViewController {
     
     @IBAction func profileOrLoginPressed(_ sender: Any) {
         let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController")
-        let profileViewController = self.storyboard?.instantiateViewController(withIdentifier: "ProfileViewController")
+        let profileViewController = self.storyboard?.instantiateViewController(withIdentifier: "UserTabViewController")
         
-        singleton.getUser()?.getStatus() == STATUS.GENERAL ?
-            self.navigationController?.pushViewController(loginViewController!, animated: true):
-            self.navigationController?.pushViewController(profileViewController!, animated: true)
+        //self.storyboard?.instantiateViewController(withIdentifier: "ProfileViewController")
+        singleton.getUser()?.getStatus() == STATUS.GENERAL ? self.navigationController?.pushViewController(loginViewController!, animated: true) : self.navigationController?.pushViewController(profileViewController!, animated: true)
     }
+    
+    @IBAction func promoViewControllerPressed(_ sender: Any) {
+        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "PromoTabController") as! PromoTabController
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+
     
     public func loadComplete(){
         log(logMessage: "Complete Load")
         let categoriesViewController = self.storyboard?.instantiateViewController(withIdentifier: "CategoriesViewController")
         self.navigationController?.pushViewController(categoriesViewController!, animated: true)
     }
+    
     
     @IBAction func logoutUser(_ sender: Any) {
         let logoutAlert = UIAlertController(title: "Выход", message: "Вы уверены, что хотите выйти?", preferredStyle: UIAlertControllerStyle.alert)
@@ -81,5 +96,11 @@ class MainViewController: BaseViewController {
         present(logoutAlert, animated: true, completion: nil)
     }
 
+    @IBAction func favoritRestsPressed(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "RestaurantsViewController") as! RestaurantsViewController
+        vc.setType(slug: "pizza")
+        vc.isFavorite = true
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 

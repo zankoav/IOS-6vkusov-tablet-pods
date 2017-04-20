@@ -11,11 +11,11 @@ import Foundation
 class JsonHelperLoad:NSObject, URLSessionTaskDelegate, URLSessionDataDelegate {
     private let url: String
     private let name: String?
-    private let params: Dictionary<String,String>?
+    private let params: Dictionary<String,AnyObject>?
     private let act: LoadJson
     private var jsonData = Data()
     
-    init(url:String, params:Dictionary<String,String>?, act: LoadJson, sessionName:String?){
+    init(url:String, params:Dictionary<String,AnyObject>?, act: LoadJson, sessionName:String?){
         self.url = url;
         self.params = params;
         self.act = act;

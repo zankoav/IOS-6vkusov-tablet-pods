@@ -17,7 +17,7 @@ class Validator {
     }
     
     class func minLength(password:String, length: Int)->Bool{
-    return password.length >= length ? true : false;
+        return password.length >= length ? true : false;
     }
     
     class func maxLength(password:String, length: Int)->Bool{
@@ -35,4 +35,11 @@ class Validator {
         let nameTest = NSPredicate(format:"SELF MATCHES %@", nameRegEx)
         return nameTest.evaluate(with: name)
     }
+    
+    class func onlyNumbers(name:String)->Bool{
+        let nameRegEx = "^[0-9]+$"
+        let nameTest = NSPredicate(format:"SELF MATCHES %@", nameRegEx)
+        return nameTest.evaluate(with: name)
+    }
+
 }

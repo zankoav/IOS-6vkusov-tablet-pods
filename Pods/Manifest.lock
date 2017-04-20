@@ -1,14 +1,17 @@
 PODS:
+  - SCLAlertView (0.7.0)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
 
 DEPENDENCIES:
+  - SCLAlertView
   - SDWebImage
 
 SPEC CHECKSUMS:
+  SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: b0828e7a6b1a9e6867ac2e5413dc43f6fa9ca3fd
+PODFILE CHECKSUM: c34c2b82857861b4ccb5eca86885958c33f015af
 
 COCOAPODS: 1.2.0

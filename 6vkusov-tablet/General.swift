@@ -27,5 +27,8 @@ class General: UserInterface {
     func getProfile() -> Dictionary<String, Any>?{
         return nil
     }
-
+    
+    func getPoints() ->Int {return 0}
+    
+    func setPoints(points:Int){}
 }

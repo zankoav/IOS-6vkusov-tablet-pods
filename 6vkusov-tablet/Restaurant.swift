@@ -10,18 +10,17 @@ import Foundation
 
 class Restaurant {
     
-    
     private var _slug:String
     private var _name:String
     private var _working_time:String
     private var _minimal_price:Float
     private var _delivery_time: String
-    private var _kitchens: [String]
-    private var _description: String
+    private var _kitchens: String
+    private var _info: InfoRestaurant
     private var _iconURL: String
     private var _comments: Dictionary<String,Int>
+    private var _categoriesSlugs:[String]
 
-    
     var slug:String{return _slug}
     
     var name:String{return _name}
@@ -32,9 +31,9 @@ class Restaurant {
     
     var delivery_time:String{return _delivery_time}
     
-    var kitchens:[String]{return _kitchens}
+    var kitchens:String{return _kitchens}
     
-    var description:String{return _description}
+    var info:InfoRestaurant{return _info}
 
     var iconURL:String{return _iconURL}
 
@@ -47,9 +46,10 @@ class Restaurant {
     var isPromo :Bool {return true}
     
     var isSale :Bool {return false}
-
     
-    init(slug: String, name: String, working_time: String, minimal_price: Float, delivery_time: String, kitchens: [String], description: String, iconURL: String, comments: Dictionary<String,Int>){
+    var categoriesSlugs :[String] {return _categoriesSlugs}
+
+    init(slug: String, name: String, working_time: String, minimal_price: Float, delivery_time: String, kitchens: String, info: InfoRestaurant, iconURL: String, comments: Dictionary<String,Int>, categoriesSlugs:[String]){
         
         self._slug = slug
         self._name = name
@@ -57,13 +57,11 @@ class Restaurant {
         self._minimal_price = minimal_price
         self._delivery_time = delivery_time
         self._kitchens = kitchens
-        self._description = description
+        self._info = info
         self._iconURL = iconURL
         self._comments = comments
+        self._categoriesSlugs = categoriesSlugs
 
     }
-    
-    func getKitchens() ->String{
-        return kitchens.joined(separator: ", ")
-    }
+
 }

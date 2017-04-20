@@ -12,4 +12,6 @@ protocol UserInterface {
     func getStatus()->STATUS
     func getProfile()->Dictionary<String,Any>?
     func getBasket()->Basket
+    func getPoints()->Int
+    func setPoints(points:Int)
 }

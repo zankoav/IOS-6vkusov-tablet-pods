@@ -11,9 +11,19 @@ import Foundation
 class Registred: UserInterface {
     
     private var basket:Basket
+    private var _points:Int
     
-    init() {
+    init(points:Int) {
         self.basket = Basket()
+        self._points = points
+    }
+    
+    func getPoints() ->Int {
+        return self._points
+    }
+    
+    func setPoints(points:Int){
+        self._points = points
     }
     
     func getBasket() -> Basket {
@@ -38,3 +48,4 @@ class Registred: UserInterface {
     }
     
 }
+
